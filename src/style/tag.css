@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: main;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  background-color: #282a35;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  height: 60px;
+  border-bottom: 1px solid white ;
+
+}
+aside {
+  background-color: #15202b;
+  width: 25%;
+  height: 100%;
+  color: aliceblue;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+  color: #e5532d;
+  width: 25%;
+  text-align: center;
+  background-color:  #15202b;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+h5 {
+  color: aliceblue;
+  font-weight: lighter;
+  margin: 0px ;
+  padding: 20px;
+  cursor: pointer;
+}
+h5:hover{
+  background-color: #e5532d;  
+
+}
+h3{
+  margin-bottom: 0px;
+}
+h4{
+  padding: 20px 0px;
+  cursor: pointer;
+  margin: 0px;
+
+}h4:hover{
+  background-color: #e5522d5a;  
+
+}
+img{
+  width: 250px;
+}
+dl{
+  margin-left: 20px;
+}
+aside div{
+    margin-top: 60px;
+    text-align: center;
+}
+textarea{
+  max-width: 95vw;
+  max-height: 50vh;
+  min-width: 95vw;
+  min-height: 50vh;
+  margin-top: 50px;
+  padding: 25px;
+  border-color: #e5532d;
+}
+button{
+  font-size: large;
+  padding: 20px 50px;
+  margin-top: 20px;
+  margin-left: auto;
+  background-color: #e5532d;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@font-face {
+  font-family: main;
+  src: url("../fonts/Alkatra-VariableFont_wght.ttf");
+}
