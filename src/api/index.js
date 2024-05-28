@@ -1,4 +1,3 @@
 import axios from "axios"
-import SECRET from "../secret"
-const REQUEST=axios.create({baseURL:`${SECRET.url}`})
+const REQUEST=axios.create({baseURL:"https://playground-server-m7ug.onrender.com/"})
 export default REQUEST
