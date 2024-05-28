@@ -11,7 +11,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Pages.English />} />
+        <Route path="/Web" element={<Pages.Web/>} />
         <Route path="/admin" element={<Pages.Admin/>} />
+        <Route path="/LogicalReasoning" element={<Pages.LogicalReasoning/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

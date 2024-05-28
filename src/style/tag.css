@@ -81,9 +81,9 @@ aside div{
     text-align: center;
 }
 textarea{
-  max-width: 95vw;
+  max-width: 94vw;
   max-height: 50vh;
-  min-width: 95vw;
+  min-width: 94vw;
   min-height: 50vh;
   margin-top: 50px;
   padding: 25px;
@@ -92,18 +92,52 @@ textarea{
 button{
   font-size: large;
   padding: 20px 50px;
-  margin-top: 20px;
   margin-left: auto;
   background-color: #e5532d;
   color: white;
   cursor: pointer;
   border-radius: 25px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:disabled{
+  opacity: .5;
+ 
+}
+input{
+  font-size: large;
+  padding: 20px 50px;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #15202b solid 2px;
 }
 form{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+select{
+  background-color: #282a35;
+  color: aliceblue;
+  height: max-content;
+  width: max-content;
+  font-size: large;
+  padding: 20px 50px;
+  cursor: pointer;
+  border-radius: 25px ;
+  border: none;
+  border-right: solid #282a35 15px;
+}
+svg{
+  fill: aliceblue;
+  color: aliceblue;
 }
 @font-face {
   font-family: main;
