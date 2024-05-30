@@ -9,36 +9,47 @@ function Page({ name }) {
   let [topic, setTopic] = useState("");
   let [score, setScore] = useState(30);
   let [loading, setLoading] = useState(true);
-  let [mounted,setMounted]=useState(false)
-  useEffect(()=>{setMounted(true)},[])
+  let [mounted, setMounted] = useState(false);
   useEffect(() => {
-    if(mounted){
-    (async () => {
-      let response = await REQUEST.get(`topic/readalltopics/${name}`);
-      setTopics(await response.data);
-    })();}
-  }, [name,mounted]);
+    setMounted(true);
+  }, []);
+  useEffect(() => {
+    if (mounted) {
+      (async () => {
+        let response = await REQUEST.get(`topic/readalltopics/${name}`);
+        setTopics(await response.data);
+      })();
+    }
+  }, [name, mounted]);
   useEffect(() => {
     let cookie = cookieJS.get("topic");
     let lastTopic = topics.find((x) => x.name === cookie);
     setTopic(lastTopic ? lastTopic : topics[0]);
   }, [topics]);
   useEffect(() => {
-    if(mounted && topic?.name?.length){
+    if (mounted && topic?.name?.length) {
       (async () => {
-        setLoading(true)
+        setLoading(true);
         let respond = await REQUEST.post("/mcq/getmcqsbytopicnumber", {
           topicNumber: topic?.number,
         });
-        setQuestions(await respond.data);
-        setScore(await respond.data.length * 3);
-        await setLoading(false)
+        setQuestions(
+          await respond.data.sort((a, b) => {
+            const num = Math.floor(10 * Math.random());
+            if (num <= 3)
+              return a.options[num].localeCompare(b.options[num - 1]);
+            if (num % 2 === 0) return a.options[0].localeCompare(b.answer);
+            else return a.head.localeCompare(b.options[0]);
+          })
+        );
+        setScore((await respond.data.length) * 3);
+        await setLoading(false);
       })();
     }
-  }, [topic,mounted]);
+  }, [topic, mounted]);
 
   return loading ? (
-   < Components.Loading permission={"user"}/>
+    <Components.Loading permission={"user"} />
   ) : (
     <div className="h-100">
       <Components.NavBar page={name} />
