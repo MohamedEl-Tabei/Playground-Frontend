@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faListOl } from "@fortawesome/free-solid-svg-icons";
+import Components from "../base/components";
 function Question({ question, score, setScore, isLast }) {
   const [yourAnswer, setYourAnswer] = useState("option");
   const [useAssistance, setUseAssistance] = useState(false);
@@ -82,7 +83,7 @@ function Question({ question, score, setScore, isLast }) {
               key={i}
               onClick={() => onSelectAnswer(option)}
             >
-              {option}
+              {option?.includes("DIVISION[")?<Components.Fraction option={option}/>:option}
             </li>
           ))}
         </ol>
