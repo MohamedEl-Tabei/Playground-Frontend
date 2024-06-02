@@ -83,16 +83,23 @@ function Question({ question, score, setScore, isLast }) {
               key={i}
               onClick={() => onSelectAnswer(option)}
             >
-              {option?.includes("D[")?<Components.Fraction option={option}/>:option}
+              {option?.includes("D[") ? (
+                <Components.Fraction option={option} />
+              ) : (
+                option
+              )}
             </li>
           ))}
         </ol>
-
-        <div
-          className={useAssistance && question.help ? "visible text-main bg-dark d-flex jcc aic px-20 rounded-25" : "hidden"}
-        >
-          {question.help}
-        </div>
+      </div>
+      <div
+        className={
+          useAssistance && question.help
+            ? "visible text-main  d-flex jcc aic p-20 w-100"
+            : "hidden p-20 w-100"
+        }
+      >
+        {question.help}
       </div>
       <hr className={isLast ? "hidden" : ""} />
     </div>
