@@ -26,6 +26,8 @@ const Admin = () => {
         setTopics(await response.data);
         setTopic("");
         setCategoryNumber(1);
+        setLoading(false);
+
       } else {
         await REQUEST.post("mcq/createmcqs", {
           mcqs: questions,
@@ -68,7 +70,7 @@ const Admin = () => {
       const options = q[3]?.split(",");
       if (options?.length) {
         arrQ.push({
-          img: q[0]?.trim(),
+          help: q[0]?.trim(),
           head: q[1]?.trim(),
           answer: q[2]?.trim(),
           options: [

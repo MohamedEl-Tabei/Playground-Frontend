@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage, faListOl } from "@fortawesome/free-solid-svg-icons";
+import { faHireAHelper } from "@fortawesome/free-brands-svg-icons";
 import Components from "../base/components";
 function Question({ question, score, setScore, isLast }) {
   const [yourAnswer, setYourAnswer] = useState("option");
@@ -20,7 +20,7 @@ function Question({ question, score, setScore, isLast }) {
     <div className="me-20">
       <h3>
         <span>{question.head}</span>{" "}
-        {question.img ? (
+        {question.help ? (
           <FontAwesomeIcon
             title="-1"
             onClick={() => {
@@ -28,7 +28,7 @@ function Question({ question, score, setScore, isLast }) {
               setScore(score - 1);
             }}
             className={useAssistance ? "d-none" : "image"}
-            icon={faImage}
+            icon={faHireAHelper}
           />
         ) : (
           <FontAwesomeIcon
@@ -57,11 +57,11 @@ function Question({ question, score, setScore, isLast }) {
               }
             }}
             className={useAssistance ? "d-none" : "image"}
-            icon={faListOl}
+            icon={faHireAHelper}
           />
         )}
       </h3>
-      <div className="d-flex jcb aic">
+      <div className="d-flex jcb ">
         <ol type="a">
           {question.options?.map((option, i) => (
             <li
@@ -83,16 +83,16 @@ function Question({ question, score, setScore, isLast }) {
               key={i}
               onClick={() => onSelectAnswer(option)}
             >
-              {option?.includes("DIVISION[")?<Components.Fraction option={option}/>:option}
+              {option?.includes("D[")?<Components.Fraction option={option}/>:option}
             </li>
           ))}
         </ol>
 
-        <img
-          className={useAssistance && question.img ? "visible" : "hidden"}
-          src={question.img}
-          alt={question.answer}
-        />
+        <div
+          className={useAssistance && question.help ? "visible text-main bg-dark d-flex jcc aic px-20 rounded-25" : "hidden"}
+        >
+          {question.help}
+        </div>
       </div>
       <hr className={isLast ? "hidden" : ""} />
     </div>

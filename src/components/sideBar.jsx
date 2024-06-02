@@ -7,7 +7,7 @@ function SideBar({ topics, setTopic, topic }) {
           <h4 key={i} className={`${t.name===topic?.name?"bg-main":""}`} onClick={()=>{
             cookieJS.set("topic",t.name)
             setTopic(t)
-          }}>{t.name}</h4>
+          }}>{`${t.name[0].toUpperCase()}${t.name.slice(1)}`}</h4>
         ))}
       </div>
     </aside>
