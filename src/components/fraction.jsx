@@ -1,5 +1,5 @@
 const Fraction = ({ option }) => {
-  const x = option.slice(9, option.indexOf("/"));
+  const x = option.slice(2, option.indexOf("/"));
   const y = option.slice(option.indexOf("/") + 1, option.indexOf("]"));
   return (
     <small
