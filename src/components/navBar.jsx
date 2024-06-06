@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 function NavBar({ page }) {
-  const pages = ["English", "Web", "Logical Reasoning"];
+  const pages = ["Home","English", "Web", "Logical Reasoning"];
   return (
     <nav>
       <h1>
@@ -10,7 +10,7 @@ function NavBar({ page }) {
       </h1>
       {pages.map((p, i) => {
         return (
-          <Link key={i} style={{ textDecoration: "none" }} to={`/${p==="English"?"":p.replace(" ","")}`}>
+          <Link title={p!=="Home"?"MCQs":""} key={i} style={{ textDecoration: "none" }} to={`/${p==='Home'?"":p.replace(" ","")}`}>
             <h5 key={i} onClick={() => {}} className={page === p ? "open" : ""}>
               {p}
             </h5>

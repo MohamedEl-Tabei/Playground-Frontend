@@ -10,7 +10,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Pages.English />} />
+        <Route path="/" element={<Pages.Home />} />
+        <Route path="/English" element={<Pages.English />} />
         <Route path="/Web" element={<Pages.Web/>} />
         <Route path="/admin" element={<Pages.Admin/>} />
         <Route path="/LogicalReasoning" element={<Pages.LogicalReasoning/>} />

@@ -95,8 +95,8 @@ function Question({ question, score, setScore, isLast }) {
       <div
         className={
           useAssistance && question.help
-            ? "visible text-main  d-flex jcc aic p-20 w-100"
-            : "hidden p-20 w-100"
+            ? "visible text-main  d-flex jcc aic p-20 "
+            : "hidden p-20 "
         }
       >
         {question.help}

@@ -5,6 +5,10 @@
 .absolute {
   position: absolute;
 }
+.animation-opcity{
+  animation-name: opcty;
+  animation-duration: 2s;
+}
 /*b*/
 .balls{
   animation-name: ball;
@@ -207,7 +211,9 @@
 .w-75 {
   width: 75%;
 }
-
+.w-50{
+  width: 50%;
+}
 .wrong {
   color: red;
   padding: 0px 10px;
@@ -378,4 +384,12 @@
      opacity: 1;
    }
   
+}
+@keyframes opcty {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
