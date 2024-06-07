@@ -6,7 +6,7 @@ import Loading from "../components/loading";
 import Fraction from "../components/fraction";
 import NewInputTypes from "../components/newInputType";
 import Media from "../components/media";
-
+import Logo from "../components/logo";
 const Components = {
   NavBar,
   SideBar,
@@ -15,6 +15,7 @@ const Components = {
   Loading,
   Fraction,
   NewInputTypes,
+  Logo,
   Media,
 };
 export default Components;

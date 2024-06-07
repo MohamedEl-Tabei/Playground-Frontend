@@ -1,3 +1,4 @@
+
 /*a*/
 .aic {
   align-items: center;
@@ -18,27 +19,29 @@
   height: 15px;
   border-radius: 50%;
   position: absolute;
-  background-color: #e5532d;
+  background-color: var(--main);
   opacity: 0;
 }
 .bg-dark {
-  background-color: #15202b;
+  background-color:var(--dark);
 }
 .bg-lightdark {
-  background-color: #282a35;
+  background-color: var(--lightDark);
+}.bg-lightdark:hover {
+  background-color: var(--lightDark);
 }
 .bg-main {
-  background-color: #e5532d;
+  background-color: var(--main);
   color: white;
 }
 .bg-main:hover {
-  background-color: #e5532d;
+  background-color: var(--main);
   color: white;
   cursor: default;
 }
 /*c*/
 .color-main {
-  color: #e5532d;
+  color: var(--main);
 }
 /*d*/
 .d-flex {
@@ -64,10 +67,10 @@
 .image {
   margin-left: 20px;
   cursor: pointer;
-  color: #e5522d7e;
+  color: var(--main-1);
 }
 .image:hover {
-  color: #e5532d;
+  color: var(--main);
 }
 /*j*/
 .jcc {
@@ -112,7 +115,7 @@
 /*n*/
 /*o*/
 .open {
-  color: #e5532d;
+  border-bottom: solid 1px var(--main)
 }
 .open:hover {
   background-color: #282a3500;
@@ -123,7 +126,7 @@
   cursor: pointer;
 }
 .option:hover {
-  color: #e5532d;
+  color:var(--main);
   font-size: larger;
 }
 /*p*/
@@ -165,13 +168,12 @@
   overflow-y: scroll;
 }
 .score {
-  background-color: #282a35;
-  top: 61px;
+  background-color: #dddfe2;
+  top: 60px;
   width: 80%;
   position: fixed;
   display: flex;
   justify-content: center;
-  color: white;
   padding: 3px;
 }
 .shapes {
