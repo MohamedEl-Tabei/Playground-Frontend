@@ -23,6 +23,7 @@ function NavBar({ page }) {
                 key={i}
                 onClick={() => {}}
                 className={page === p ? "open" : ""}
+                style={{transform:"scale(.8)"}}
               >
                 {p}
               </h5>

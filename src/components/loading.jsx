@@ -17,14 +17,19 @@ function Loading({ permission }) {
           <div className={permission === "admin" ? "d-none" : "score"}>
             <span style={{ visibility: "hidden" }}>Score</span>
           </div>{" "}
-          <div className="d-flex jcc aic h-100 ">
-            <div className="relative  d-flex jcc aic">
+          <div className="d-flex jcc aic h-100 " style={{overflow:"hidden"}}>
+            <div
+              className="relative  d-flex jcc aic "
+              style={{
+                width: 400,
+                height: 400,
+                borderRadius: "50%",
+              }}
+            >
               <h1
                 className="absolute  "
                 style={{
                   textAlign: "center",
-                  animationName: "logo-a",
-                  animationDuration: "3s",
                   height: "max-content",
                   width: "max-content",
                   padding: "0px",
@@ -32,13 +37,13 @@ function Loading({ permission }) {
                   fontSize: 50,
                   borderRadius: "0px 20px 0px 20px",
                   border: "none",
-                  backgroundColor: "white",
+                  transform: "scale(.4)",
                 }}
               >
                 <div
                   className="d-flex aic jcb"
                   style={{
-                    border: "3px #f68840  solid",
+                    border: "4px #f68840  solid",
                     borderLeft: "none",
                     borderBottom: "none",
                     borderRadius: "0px 20px 0px 0px",
@@ -61,33 +66,47 @@ function Loading({ permission }) {
                     style={{
                       margin: "0px 17px 0px 15px",
                       fontWeight: "lighter",
+                      color: "white",
                     }}
+                    className="bg-dark"
                   >
                     Playground
                   </div>
                 </div>
               </h1>
               <div className="shapes">
-                {[0, 1, 2, 3].map((b) => (
+                <div
+                  style={{ width: 300, height: 250, borderRadius: "50%", rotate: "30deg"}}
+                  className="bg-lightdark d-flex jcc aic"
+                >
                   <div
-                    key={b}
-                    className="balls "
                     style={{
-                      animationDelay: `${b}s`,
-                      animationName: `ball-${b}`,
+                      width: 300,
+                      height: 250,
+                      borderRadius: "50%",
+                      rotate: "30deg",
                     }}
-                  />
-                ))}
-                {[0, 1, 2, 3].map((b) => (
-                  <div
-                    key={b}
-                    className="balls "
-                    style={{
-                      animationDelay: `${b + 2}s`,
-                      animationName: `ball-${b}`,
-                    }}
-                  />
-                ))}
+                    className="bg-main d-flex jcc aic"
+                  >
+                    <div
+                      style={{ width: 300, height: 250, borderRadius: "50%" ,backgroundColor:"white",
+                      rotate: "30deg",
+
+                      }}
+                      className=" d-flex jcc aic"
+                    >
+                      <div
+                        style={{
+                          width: 200,
+                          height: 180,
+                          borderRadius: "50%",
+                          rotate: "30deg",
+                        }}
+                        className="bg-dark"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

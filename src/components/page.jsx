@@ -62,7 +62,7 @@ function Page({ name }) {
           </div>
           <ol className="m-0">
             {questions?.map((q, i) => (
-              <li key={i}>
+              <li key={i} >
                 <Components.Question
                   isLast={i === questions.length - 1}
                   question={q}

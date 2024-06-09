@@ -17,8 +17,8 @@ function Question({ question, score, setScore, isLast }) {
     setUseAssistance(false); /////////////////////////////////Edit it
   }, [question]);
   return (
-    <div className="me-20">
-      <h3>
+    <div className="me-20" >
+      <h3 >
         <span>{question.head}</span>{" "}
         {question.help ? (
           <FontAwesomeIcon

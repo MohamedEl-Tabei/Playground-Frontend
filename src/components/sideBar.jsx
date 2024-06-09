@@ -2,12 +2,16 @@ import cookieJS from "js-cookie"
 function SideBar({ topics, setTopic, topic }) {
   return (
     <aside>
-      <div>
+      <div style={{marginTop:60,textAlign:"center"}}>
         {topics?.map((t, i) => (
-          <h4 key={i} className={`${t.name===topic?.name?"bg-lightdark":""}`} onClick={()=>{
+          <h4 key={i} style={{backgroundColor:`${t.name===topic?.name?"#445469":""}`}} onClick={()=>{
             cookieJS.set("topic",t.name)
             setTopic(t)
-          }}>{`${t.name[0].toUpperCase()}${t.name.slice(1)}`}</h4>
+          }}>
+            <div style={{transform:"scale(.8)"}}>
+            {`${t.name[0].toUpperCase()}${t.name.slice(1)}`}
+            </div>
+          </h4>
         ))}
       </div>
     </aside>
