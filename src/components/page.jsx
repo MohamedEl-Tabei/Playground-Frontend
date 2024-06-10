@@ -56,13 +56,18 @@ function Page({ name }) {
       <div className="d-flex w-100 h-100 ">
         <Components.SideBar topic={topic} topics={topics} setTopic={setTopic} />
         <div style={{ marginTop: 90 }} className="scroll-y w-75">
-          <div className="score">
-            Score: <span style={{ marginLeft: 7 }}>{score}</span>/
-            {questions.length * 3}
+          <div
+            className="score w-75 d-flex aic jcc"
+            style={{ color: "#445469", fontSize: 15, height: 27.2 }}
+          >
+            <small>
+              Score: <span style={{ marginLeft: 7 }}>{score}</span>/
+              {questions.length * 3}
+            </small>
           </div>
           <ol className="m-0">
             {questions?.map((q, i) => (
-              <li key={i} >
+              <li key={i}>
                 <Components.Question
                   isLast={i === questions.length - 1}
                   question={q}

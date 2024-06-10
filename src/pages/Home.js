@@ -17,7 +17,7 @@ function Home() {
       <div className="d-flex w-100 h-100 ">
         <aside>
           <div  style={{marginTop:60,textAlign:"center"}}>
-            {["Home", "Web", "English", "Logical Reasoning"].map((p, i) => (
+            {["Home", "Web", "English", "Logical Reasoning","Database"].map((p, i) => (
               <Link
                 title={p !== "Home" ? "MCQs" : ""}
                 key={i}
@@ -34,8 +34,8 @@ function Home() {
 
         <div className="w-75 h-100" style={{ overflow: "hidden" }}>
           <div className="scroll-y" style={{ marginTop: 90, height: "87%" }}>
-            <div className="score color-main">
-              <small>Entertainment</small>
+            <div className="score  w-75 d-flex aic jcc" style={{color:"#445469",fontSize:15,height:27.2}}>
+              <small>Programming gives you the power to create a virtual world centered around your ideas and imagination.</small>
             </div>
             <ol>
               {Questions.map((q, i) => (

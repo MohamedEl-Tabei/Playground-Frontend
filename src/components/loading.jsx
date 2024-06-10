@@ -17,7 +17,7 @@ function Loading({ permission }) {
           <div className={permission === "admin" ? "d-none" : "score"}>
             <span style={{ visibility: "hidden" }}>Score</span>
           </div>{" "}
-          <div className="d-flex jcc aic h-100 " style={{overflow:"hidden"}}>
+          <div className="d-flex jcc aic h-100 " style={{ overflow: "hidden" }}>
             <div
               className="relative  d-flex jcc aic "
               style={{
@@ -74,35 +74,35 @@ function Loading({ permission }) {
                   </div>
                 </div>
               </h1>
-              <div className="shapes">
+              <div className="shapes relatives">
                 <div
-                  style={{ width: 300, height: 250, borderRadius: "50%", rotate: "30deg"}}
-                  className="bg-lightdark d-flex jcc aic"
+                  style={{ width: 300, height: 300 }}
+                  className="bg-lightdark d-flex jcc aic shapes"
                 >
                   <div
                     style={{
-                      width: 300,
-                      height: 250,
-                      borderRadius: "50%",
-                      rotate: "30deg",
+                      width: "80%",
+                          animation:"none",
+                      height: "80%",
                     }}
-                    className="bg-main d-flex jcc aic"
+                    className="bg-main d-flex jcc aic shapes"
                   >
                     <div
-                      style={{ width: 300, height: 250, borderRadius: "50%" ,backgroundColor:"white",
-                      rotate: "30deg",
-
+                      style={{
+                        width: "90%",
+                        height: "90%",
+                          animation:"none",
+                        backgroundColor: "white",
                       }}
-                      className=" d-flex jcc aic"
+                      className="shapes d-flex jcc aic"
                     >
                       <div
                         style={{
-                          width: 200,
-                          height: 180,
-                          borderRadius: "50%",
-                          rotate: "30deg",
+                          width: "90%",
+                          height: "90%",
+                          animation:"none"
                         }}
-                        className="bg-dark"
+                        className="bg-dark shapes"
                       />
                     </div>
                   </div>
