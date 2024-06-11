@@ -65,6 +65,7 @@ h5:hover{
 }
 h3{
   margin-bottom: 0px;
+  font-weight: lighter;
 }
 h4{
   padding: 20px 0px;
@@ -126,7 +127,7 @@ form{
   align-items: center;
 }
 select{
-  background-color: #282a35;
+  background-color: var(--lightDark);
   color: aliceblue;
   height: max-content;
   width: max-content;
@@ -135,7 +136,7 @@ select{
   cursor: pointer;
   border-radius: 25px ;
   border: none;
-  border-right: solid #282a35 15px;
+  border-right: solid var(--lightDark) 15px;
 }
 svg{
   fill: aliceblue;

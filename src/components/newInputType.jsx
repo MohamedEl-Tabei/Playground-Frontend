@@ -10,7 +10,7 @@ function NewInputTypes() {
     "Number",
     "Range",
   ];
-  let [color, setColor] = useState("#e5532d");
+  let [color, setColor] = useState("#f68840");
   let [range, setRange] = useState(0);
   return (
     <form

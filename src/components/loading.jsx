@@ -47,6 +47,8 @@ function Loading({ permission }) {
                     borderLeft: "none",
                     borderBottom: "none",
                     borderRadius: "0px 20px 0px 0px",
+                    animationName:"opcty",
+                    animationDuration:"3s"
                   }}
                 >
                   <img

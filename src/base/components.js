@@ -7,6 +7,7 @@ import Fraction from "../components/fraction";
 import NewInputTypes from "../components/newInputType";
 import Media from "../components/media";
 import Logo from "../components/logo";
+import TestSetup from "../components/testSetup";
 const Components = {
   NavBar,
   SideBar,
@@ -17,5 +18,7 @@ const Components = {
   NewInputTypes,
   Logo,
   Media,
+TestSetup
+
 };
 export default Components;

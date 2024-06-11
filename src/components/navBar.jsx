@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import Components from "../base/components";
 function NavBar({ page }) {
-  const pages = ["Home", "English", "Web", "Logical Reasoning","Database"];
+  const pages = ["Home", "English", "Web", "Logical Reasoning", "Database"];
   return (
     <nav>
       <Components.Logo />
       {page === "Home" ? (
-        <small className="w-75" style={{color:"white" , textAlign:"center"}}>
+        <small className="w-75" style={{ color: "white", textAlign: "center" }}>
           Welcome to my playground which contains some information I learned and
           applied.
         </small>
@@ -23,7 +23,7 @@ function NavBar({ page }) {
                 key={i}
                 onClick={() => {}}
                 className={page === p ? "open" : ""}
-                style={{transform:"scale(.8)"}}
+                style={{ transform: "scale(.8)" }}
               >
                 {p}
               </h5>
@@ -31,6 +31,7 @@ function NavBar({ page }) {
           );
         })
       )}
+      <Link className="btn-test" to={"/test"}>Test</Link>
     </nav>
   );
 }

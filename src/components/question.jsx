@@ -17,9 +17,25 @@ function Question({ question, score, setScore, isLast }) {
     setUseAssistance(false); /////////////////////////////////Edit it
   }, [question]);
   return (
-    <div className="me-20" >
-      <h3 >
-        <span>{question.head}</span>{" "}
+    <div className="me-20">
+      <h3 className="d-flex aic ">
+        <span>
+          {question.head.includes("D[") ? (
+            <div className="d-flex aic">
+              <span style={{marginRight:10}}>{question.head.slice(0, question.head.indexOf("D"))}</span>
+
+              <Components.Fraction
+                option={question.head.slice(
+                  question.head.indexOf("D"),
+                  question.head.indexOf("]") + 1
+                )}
+              />
+              <span style={{marginLeft:10}}>{question.head.slice(question.head.indexOf("]") + 1)}</span>
+            </div>
+          ) : (
+            question.head
+          )}
+        </span>
         {question.help ? (
           <FontAwesomeIcon
             title="-1"
@@ -32,7 +48,7 @@ function Question({ question, score, setScore, isLast }) {
           />
         ) : (
           <FontAwesomeIcon
-            title="Delete two options -1"
+            title="-1"
             onClick={() => {
               setUseAssistance(true);
               setScore(score - 1);
@@ -62,7 +78,7 @@ function Question({ question, score, setScore, isLast }) {
         )}
       </h3>
       <div className="d-flex jcb ">
-        <ol type="a">
+        <ol type="a"  className={question.options[0].length<15?"d-flex w-100 jcb aic":""} style={{flexWrap:"wrap",marginTop:10}}>
           {question.options?.map((option, i) => (
             <li
               className={`
