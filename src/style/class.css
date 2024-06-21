@@ -62,6 +62,9 @@
   color: var(--main);
 
 }
+.border-bottom{
+  border-bottom: var(--main) solid 1px;
+}
 /*c*/
 .color-main {
   color: var(--main);
@@ -75,6 +78,12 @@
 }
 /*e*/
 /*f*/
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.fs-smaller{
+  font-size: smaller;
+}
 /*g*/
 /*h*/
 .h-100 {
@@ -119,6 +128,9 @@
 /*m*/
 .mt-50 {
   margin-top: 50px;
+}
+.mt-15{
+  margin-top: 15px;
 }
 .mt-25 {
   margin-top: 25px;
