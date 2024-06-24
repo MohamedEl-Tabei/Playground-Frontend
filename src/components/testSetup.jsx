@@ -7,9 +7,22 @@ const TestSetup = () => {
   let [allTopics, setAllTopics] = useState([]);
   let [mounted, setMounted] = useState(false);
   let [max, setMax] = useState(0);
-  let [time, setTime] = useState(1);
+  let [time, setTime] = useState(10);
   let [numQ, setNumQ] = useState(max);
   let [loading, setLoading] = useState(true);
+  let [finishSetup,setFinishSetup]=useState(false)
+  let [testQuestions,setTestQuestions]=useState([])
+  const onSubmitHandler=async(e)=>{
+    const payload={
+      numQ,testTopics
+    }
+    e.preventDefault()
+    setAllTopics([])//to show Loading
+    REQUEST.post("mcq/createmcqstest",{payload}).then(response=>{
+      setFinishSetup(true)
+      setTestQuestions(response.data)
+    })
+  }
   const onChecked = async (topicId) => {
     let arr = [];
     setLoading(true)
@@ -36,11 +49,13 @@ const TestSetup = () => {
     if (mounted)
       REQUEST.get(`topic/readalltopics/All`).then((v) => {setAllTopics(v.data);setLoading(false)});
   }, [mounted]);
+  if(finishSetup) return<Components.MCQsTest testQuestions={testQuestions} time={time}/>
   if (!allTopics.length) return <Components.Loading permission="admin" />;
   return (
     <form
       action=""
       style={{ width: "100%", height: "90%", backgroundColor: "white" }}
+      onSubmit={(e)=>onSubmitHandler(e)}
     >
       <h1
         style={{
@@ -85,7 +100,7 @@ const TestSetup = () => {
       </div>
       {["Questions", "Time"].map((l, i) => {
         return (
-          <div className="d-flex w-75 jcc mt-25">
+          <div key={i} className="d-flex w-75 jcc mt-25">
             <label className="d-flex aic" htmlFor={l}>
               {l}{" "}
               <small style={{ marginLeft: 10 }}>
@@ -98,7 +113,7 @@ const TestSetup = () => {
                 padding: i === 0 ? "5px 10px" : "0px",
                 borderRadius: 8,
               }}
-              min={i === 0 ? 0 : 10}
+              min="10"
               max={i === 0 ? max : 180}
               type={i === 0 ? "number" : "range"}
               id={l}
@@ -128,7 +143,7 @@ const TestSetup = () => {
             className={`${loading ? "shapes" : ""}`}
             style={{ animationDuration: "500ms" }}
           >
-            {loading ? "0" : "Start test"}
+            {loading ? "Ͽ" : "Start test"}
           </span>
         </button>
       </div>
