@@ -12,6 +12,20 @@ function Question({ question, score, setScore, isLast }) {
     setScore(option.trim() !== question.answer.trim() ? score - 2 : score);
     setUseAssistance(true);
   };
+  const addNewLine=(str)=>{
+    if(str.includes("<br>"))
+      {
+        let arr=str.split("<br>")
+        return(
+          <span>
+            {arr.map((s,i)=>{
+               return <div key={i}>{s}</div>
+            })}
+          </span>
+        )
+      }
+      return<span>{str}</span>
+  }
   useEffect(() => {
     setYourAnswer("option");
     setUseAssistance(false); /////////////////////////////////Edit it
@@ -33,7 +47,7 @@ function Question({ question, score, setScore, isLast }) {
               <span style={{marginLeft:10}}>{question.head.slice(question.head.indexOf("]") + 1)}</span>
             </div>
           ) : (
-            question.head
+            addNewLine(question.head)
           )}
         </span>
         {question.help ? (

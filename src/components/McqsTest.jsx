@@ -60,6 +60,20 @@ const MCQsTest = ({ testQuestions, time }) => {
     setFinishTest(true);
     clearTimeout(timeRef.current);
   };
+  const addNewLine=(str)=>{
+    if(str.includes("<br>"))
+      {
+        let arr=str.split("<br>")
+        return(
+          <span>
+            {arr.map((s,i)=>{
+               return <div key={i}>{s}</div>
+            })}
+          </span>
+        )
+      }
+      return<span>{str}</span>
+  }
   return (
     <div
       className="absolute"
@@ -142,7 +156,7 @@ const MCQsTest = ({ testQuestions, time }) => {
                     </span>
                   </div>
                 ) : (
-                  mcq.head
+                  addNewLine(mcq.head)
                 )}
               </div>
               <div
