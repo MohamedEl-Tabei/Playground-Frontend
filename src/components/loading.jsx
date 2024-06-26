@@ -1,7 +1,7 @@
 function Loading({ permission }) {
   return (
     <div className="h-100 ">
-      <nav className={permission === "admin" ? "d-none" : ""}>
+      <nav className={permission === "admin" ? "d-none" : " mobile-d-none"}>
         <h1>
           <div style={{ textDecoration: "none" }} className="color-main">
             <div></div>
@@ -9,12 +9,12 @@ function Loading({ permission }) {
         </h1>
       </nav>
       <div className="d-flex w-100 h-100 ">
-        <aside className={permission === "admin" ? "d-none" : ""}></aside>
+        <aside className={permission === "admin" ? "d-none" : " mobile-d-none"}></aside>
         <div
           style={{ marginTop: permission === "admin" ? 0 : 90 }}
-          className={permission === "admin" ? "w-100" : "scroll-y w-75 "}
+          className={permission === "admin" ? "w-100" : "scroll-y w-75 mobile-w-100"}
         >
-          <div className={permission === "admin" ? "d-none" : "score"}>
+          <div className={permission === "admin" ? "d-none" : "score mobile-d-none"}>
             <span style={{ visibility: "hidden" }}>Score</span>
           </div>{" "}
           <div className="d-flex jcc aic h-100 " style={{ overflow: "hidden" }}>

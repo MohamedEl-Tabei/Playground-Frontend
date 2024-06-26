@@ -354,6 +354,9 @@
 .text-main {
   color: #e5532d;
 }
+.text-dark {
+  color: var(--dark);
+}
 /*u*/
 /*v*/
 .visible {

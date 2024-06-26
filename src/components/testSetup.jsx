@@ -72,9 +72,9 @@ const TestSetup = () => {
     );
   return (
     <form
-      action=""
       style={{ width: "100%", height: "90%", backgroundColor: "white" }}
       onSubmit={(e) => onSubmitHandler(e)}
+      className="mobile-y-scroll "
     >
       <h1
         style={{
@@ -85,7 +85,7 @@ const TestSetup = () => {
       >
         Set up your test
       </h1>
-      <div className="w-75  mt-25 border-bottom">
+      <div className="w-75 mobile-w-100  mt-25 border-bottom">
         {mainTopics.map((m, i) => {
           return (
             <dl
@@ -99,7 +99,7 @@ const TestSetup = () => {
                 {allTopics.map((t, j) => {
                   if (i + 1 === t.category)
                     return (
-                      <div key={j} className="d-flex" style={{ width: "30%" }}>
+                      <div key={j} className="d-flex mobile-w-mc mobile-mw-50 mobile-me-10" style={{ width: "30%" }}>
                         <input
                           style={{ marginRight: 5 }}
                           className="m-0 bg-main"
@@ -119,8 +119,8 @@ const TestSetup = () => {
       </div>
       {["Questions", "Time"].map((l, i) => {
         return (
-          <div key={i} className="d-flex w-75 jcc mt-25">
-            <label className="d-flex aic" htmlFor={l}>
+          <div key={i} className="d-flex w-75 mobile-w-100   jcc mt-25">
+            <label className="d-flex aic mobile-ms-10" htmlFor={l}>
               {l}{" "}
               <small style={{ marginLeft: 10 }}>
                 {i === 0 ? `max (${max})` : `(${time}min)`}
@@ -142,12 +142,13 @@ const TestSetup = () => {
                   ? setNumQ(e.currentTarget.value)
                   : setTime(e.currentTarget.value)
               }
+              className="mobile-me-10"
             />
           </div>
         );
       })}
 
-      <div className="w-75 mt-25">
+      <div className="w-75 mobile-w-100   mt-25">
         <button
           style={{
             width: "150px",
@@ -156,6 +157,7 @@ const TestSetup = () => {
             borderRadius: 8,
             border: "2px solid var(--main)",
           }}
+          className="mobile-me-10"
           disabled={loading}
         >
           <span

@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Components from "../base/components";
 import REQUEST from "../api";
 import cookieJS from "js-cookie";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Page({ name }) {
   let [questions, setQuestions] = useState([]);
@@ -10,6 +13,9 @@ function Page({ name }) {
   let [score, setScore] = useState(30);
   let [loading, setLoading] = useState(true);
   let [mounted, setMounted] = useState(false);
+  let [showSideBarForMobile, setShowSideBarForMobile] = useState(false);
+  const pages = ["Home", "English", "Web", "Logical Reasoning", "Database"];
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -54,12 +60,47 @@ function Page({ name }) {
     <div className="h-100">
       <Components.NavBar page={name} />
       <div className="d-flex w-100 h-100 ">
-        <Components.SideBar topic={topic} topics={topics} setTopic={setTopic} />
+        <Components.SideBar
+          setShowSideBarForMobile={setShowSideBarForMobile}
+          showSideBarForMobile={showSideBarForMobile}
+          topic={topic}
+          topics={topics}
+          setTopic={setTopic}
+        />
         <div style={{ marginTop: 90 }} className="scroll-y w-75 mobile-w-100">
           <div
             className="score w-75 d-flex aic jcc mobile-w-100"
             style={{ color: "#445469", fontSize: 15, height: 27.2 }}
           >
+            <FontAwesomeIcon
+              onClick={() => setShowSideBarForMobile(true)}
+              className="d-none mobile-d-block"
+              style={{ color: "#445469" }}
+              icon={faEllipsisVertical}
+            />
+            <div className="d-none w-50 mobile-nav mobile-d-flex">
+              {
+                pages.map((p, i) => {
+                  return (
+                    <Link
+                      title={p !== "Home" ? "MCQs" : ""}
+                      key={i}
+                      style={{ textDecoration: "none" }}
+                      to={`/${p === "Home" ? "" : p.replace(" ", "")}`}
+                    >
+                      <h5
+                        key={i}
+                        onClick={() => {}}
+                        className={`mobile-w-mc text-dark ${ name === p ? "open" : ""}`}
+                        style={{ transform: "scale(.8)",margin:p==="Home"?0:"" }}
+                      >
+                        {p}
+                      </h5>
+                    </Link>
+                  );
+                })
+              }
+            </div>
             <small>
               Score: <span style={{ marginLeft: 7 }}>{score}</span>/
               {questions.length * 3}

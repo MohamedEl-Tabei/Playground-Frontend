@@ -95,7 +95,7 @@ const MCQsTest = ({ testQuestions, time }) => {
           Setup new test
         </button>
       </div>
-      <div className="h-80vh scroll-y border-top border-bottom d-flex flex-column  aic mt-15 mb-15 ">
+      <div className="h-80vh scroll-y border-top border-bottom d-flex flex-column  aic mt-15 mb-15  mobile-fs-11" style={{overflowX:"hidden"}}>
         {testQuestions.map((mcq, i) => {
           return (
             <div
@@ -192,7 +192,7 @@ const MCQsTest = ({ testQuestions, time }) => {
         })}
       </div>
       <div className="px-20 d-flex jcb aic ">
-        <div className="w-75  d-flex" style={{ overflowX: "scroll" }}>
+        <div className="w-75 mobile-w-50  d-flex" style={{ overflowX: "scroll" }}>
           <button className="btn-close p-0 mx-10 hidden">x</button>
           {flags.map((flag, i) => {
             return (
@@ -216,7 +216,7 @@ const MCQsTest = ({ testQuestions, time }) => {
           <button
             className="btn-submit"
             onClick={() => onsubmitTest()}
-            style={{ fontSize: "small", padding: "10px 15px", marginLeft: 0 }}
+            style={{ fontSize: "small", padding: "10px 15px", marginLeft: 0 ,minWidth:"max-content"}}
           >
             Submit test
           </button>

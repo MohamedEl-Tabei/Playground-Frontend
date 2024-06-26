@@ -6,7 +6,7 @@ function NavBar({ page }) {
     <nav>
       <Components.Logo />
       {page === "Home" ? (
-        <small className="w-75" style={{ color: "white", textAlign: "center" }}>
+        <small className="w-75 mobile-d-none" style={{ color: "white", textAlign: "center" }}>
           Welcome to my playground which contains some information I learned and
           applied.
         </small>
@@ -32,7 +32,7 @@ function NavBar({ page }) {
           );
         })
       )}
-      <Link className="btn-test" to={"/test"}>Test</Link>
+      <Link className="btn-test " to={"/test"}>Test</Link>
     </nav>
   );
 }
