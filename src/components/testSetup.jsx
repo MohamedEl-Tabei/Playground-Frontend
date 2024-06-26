@@ -10,22 +10,23 @@ const TestSetup = () => {
   let [time, setTime] = useState(10);
   let [numQ, setNumQ] = useState(max);
   let [loading, setLoading] = useState(true);
-  let [finishSetup,setFinishSetup]=useState(false)
-  let [testQuestions,setTestQuestions]=useState([])
-  const onSubmitHandler=async(e)=>{
-    const payload={
-      numQ,testTopics
-    }
-    e.preventDefault()
-    setAllTopics([])//to show Loading
-    REQUEST.post("mcq/createmcqstest",{payload}).then(response=>{
-      setFinishSetup(true)
-      setTestQuestions(response.data)
-    })
-  }
+  let [finishSetup, setFinishSetup] = useState(false);
+  let [testQuestions, setTestQuestions] = useState([]);
+  const onSubmitHandler = async (e) => {
+    const payload = {
+      numQ,
+      testTopics,
+    };
+    e.preventDefault();
+    setAllTopics([]); //to show Loading
+    REQUEST.post("mcq/createmcqstest", { payload }).then((response) => {
+      setFinishSetup(true);
+      setTestQuestions(response.data);
+    });
+  };
   const onChecked = async (topicId) => {
     let arr = [];
-    setLoading(true)
+    setLoading(true);
     if (testTopics?.includes(topicId)) {
       while (testTopics.length) {
         let id = testTopics.pop();
@@ -37,25 +38,43 @@ const TestSetup = () => {
       arr.push(topicId);
       setTestTopics(arr);
     }
-    let response=(await REQUEST.post("topic/maxMcqs", { testTopics: arr }))
-    setNumQ(response.data<numQ?response.data:numQ)
+    let response = await REQUEST.post("topic/maxMcqs", { testTopics: arr });
+    setNumQ(response.data < numQ ? response.data : numQ);
     setMax(response.data);
-    setLoading(false)
+    setLoading(false);
   };
   useEffect(() => {
     setMounted(true);
   }, []);
   useEffect(() => {
     if (mounted)
-      REQUEST.get(`topic/readalltopics/All`).then((v) => {setAllTopics(v.data);setLoading(false)});
+      REQUEST.get(`topic/readalltopics/All`).then((v) => {
+        setAllTopics(v.data);
+        setLoading(false);
+      });
   }, [mounted]);
-  if(finishSetup) return<Components.MCQsTest testQuestions={testQuestions} time={time}/>
-  if (!allTopics.length) return <Components.Loading permission="admin" />;
+  if (finishSetup)
+    return <Components.MCQsTest testQuestions={testQuestions} time={time} />;
+  if (!allTopics.length)
+    return (
+      <div
+        style={{
+          position: "absolute",
+          overflow: "hidden",
+          width: " 100%",
+          height: "100%",
+          backgroundColor: "white",
+          top: 0,
+        }}
+      >
+        <Components.Loading permission="admin" />
+      </div>
+    );
   return (
     <form
       action=""
       style={{ width: "100%", height: "90%", backgroundColor: "white" }}
-      onSubmit={(e)=>onSubmitHandler(e)}
+      onSubmit={(e) => onSubmitHandler(e)}
     >
       <h1
         style={{

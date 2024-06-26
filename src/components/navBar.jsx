@@ -18,6 +18,7 @@ function NavBar({ page }) {
               key={i}
               style={{ textDecoration: "none" }}
               to={`/${p === "Home" ? "" : p.replace(" ", "")}`}
+              className="mobile-d-none"
             >
               <h5
                 key={i}

@@ -55,9 +55,9 @@ function Page({ name }) {
       <Components.NavBar page={name} />
       <div className="d-flex w-100 h-100 ">
         <Components.SideBar topic={topic} topics={topics} setTopic={setTopic} />
-        <div style={{ marginTop: 90 }} className="scroll-y w-75">
+        <div style={{ marginTop: 90 }} className="scroll-y w-75 mobile-w-100">
           <div
-            className="score w-75 d-flex aic jcc"
+            className="score w-75 d-flex aic jcc mobile-w-100"
             style={{ color: "#445469", fontSize: 15, height: 27.2 }}
           >
             <small>
@@ -65,7 +65,7 @@ function Page({ name }) {
               {questions.length * 3}
             </small>
           </div>
-          <ol className="m-0">
+          <ol className="m-0 mobile-f-s">
             {questions?.map((q, i) => (
               <li key={i}>
                 <Components.Question

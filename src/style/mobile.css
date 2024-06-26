@@ -1,0 +1,14 @@
+@media (min-width:0px) and (max-width:450px){
+    .mobile-d-none{
+        display: none ;
+    }
+    .mobile-w-100{
+        width: 100%;
+    }
+    .mobile-f-s{
+        font-size: 11px;
+    }
+    nav{
+        justify-content: space-between;
+    }
+}

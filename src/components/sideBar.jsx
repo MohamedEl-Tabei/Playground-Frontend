@@ -1,7 +1,7 @@
 import cookieJS from "js-cookie"
 function SideBar({ topics, setTopic, topic }) {
   return (
-    <aside>
+    <aside className="mobile-d-none">
       <div style={{marginTop:60,textAlign:"center"}}>
         {topics?.map((t, i) => (
           <h4 key={i} style={{backgroundColor:`${t.name===topic?.name?"#445469":""}`}} onClick={()=>{
