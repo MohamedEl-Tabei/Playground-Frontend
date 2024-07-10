@@ -133,6 +133,9 @@
 .image:hover {
   color: var(--main);
 }
+.input-light{
+  border: none;
+}
 /*j*/
 .jcc {
   justify-content: center;

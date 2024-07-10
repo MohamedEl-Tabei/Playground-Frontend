@@ -9,6 +9,7 @@ import Media from "../components/media";
 import Logo from "../components/logo";
 import TestSetup from "../components/testSetup";
 import MCQsTest from "../components/McqsTest";
+import Zindex from "../components/z-index";
 const Components = {
   NavBar,
   SideBar,
@@ -19,8 +20,8 @@ const Components = {
   NewInputTypes,
   Logo,
   Media,
-TestSetup,
-MCQsTest
-
+  TestSetup,
+  MCQsTest,
+  Zindex,
 };
 export default Components;

@@ -9,6 +9,9 @@ const Questions = [
     head: "What are the newly introduced input types in HTML5?",
     component: Component.NewInputTypes,
   },
- 
+  {
+    head: "Define z-index.",
+    component: Component.Zindex,
+  },
 ];
 export default Questions;
