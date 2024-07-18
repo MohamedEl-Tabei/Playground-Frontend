@@ -13,5 +13,9 @@ const Questions = [
     head: "Define z-index.",
     component: Component.Zindex,
   },
+  {
+    head: "What are the benefits of CSS Sprites?",
+    component: Component.Sprites,
+  },
 ];
 export default Questions;

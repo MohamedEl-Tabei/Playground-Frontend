@@ -10,6 +10,7 @@ import Logo from "../components/logo";
 import TestSetup from "../components/testSetup";
 import MCQsTest from "../components/McqsTest";
 import Zindex from "../components/z-index";
+import Sprites from "../components/Sprites";
 const Components = {
   NavBar,
   SideBar,
@@ -23,5 +24,6 @@ const Components = {
   TestSetup,
   MCQsTest,
   Zindex,
+Sprites
 };
 export default Components;
