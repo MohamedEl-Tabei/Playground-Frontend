@@ -15,7 +15,7 @@ root.render(
         <Route path="/" element={<Pages.Home />} />
         <Route path="/Test" element={<Pages.Test />} />
         <Route path="/English" element={<Pages.English />} />
-        <Route path="/Database" element={<Pages.Database />} />
+        <Route path="/Exams" element={<Pages.Exams />} />
         <Route path="/Web" element={<Pages.Web/>} />
         <Route path="/admin" element={<Pages.Admin/>} /> 
         <Route path="/LogicalReasoning" element={<Pages.LogicalReasoning/>} />

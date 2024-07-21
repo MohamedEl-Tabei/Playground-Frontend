@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Components from "../base/components";
 function NavBar({ page }) {
-  const pages = ["Home", "English", "Web", "Logical Reasoning", "Database"];
+  const pages = ["Home", "English", "Web", "Logical Reasoning", "Exams"];
   return (
     <nav>
       <Components.Logo />

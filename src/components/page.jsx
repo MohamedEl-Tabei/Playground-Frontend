@@ -14,7 +14,7 @@ function Page({ name }) {
   let [loading, setLoading] = useState(true);
   let [mounted, setMounted] = useState(false);
   let [showSideBarForMobile, setShowSideBarForMobile] = useState(false);
-  const pages = ["Home", "English", "Web", "Logical Reasoning", "Database"];
+  const pages = ["Home", "English", "Web", "Logical Reasoning", "Exams"];
 
   useEffect(() => {
     setMounted(true);
@@ -23,7 +23,7 @@ function Page({ name }) {
     if (mounted) {
       (async () => {
         let response = await REQUEST.get(`topic/readalltopics/${name}`);
-        setTopics(await response.data);
+        setTopics(await response.data.sort((a,b)=>a.name.localeCompare(b.name)));
       })();
     }
   }, [name, mounted]);

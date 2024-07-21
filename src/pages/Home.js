@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 function Home() {
   let [loading, setLoading] = useState(true);
   let [mounted, setMounted] = useState(false);
-  const pages = ["Home", "English", "Web", "Logical Reasoning", "Database"];
+  const pages = ["Home", "English", "Web", "Logical Reasoning", "Exams"];
 
   useEffect(() => setMounted(true), []);
   useEffect(() => {
@@ -19,7 +19,7 @@ function Home() {
       <div className="d-flex w-100 h-100 mobile-fs-11 ">
         <aside className={"mobile-d-none"}>
           <div style={{ marginTop: 60, textAlign: "center" }}>
-            {["Home", "Web", "English", "Logical Reasoning", "Database"].map(
+            {["Home", "Web", "English", "Logical Reasoning", "Exams"].map(
               (p, i) => (
                 <Link
                   title={p !== "Home" ? "MCQs" : ""}
