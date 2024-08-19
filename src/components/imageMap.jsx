@@ -14,7 +14,7 @@ const ImageMap = () => {
       </p>
       <div className="d-flex jcc">
         <img
-          src="Capture.png"
+          src="https://i.ibb.co/GFwSWM5/Capture.png"
           alt="projects"
           style={{ width: "auto" }}
           className="mobile-d-none "
