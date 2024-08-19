@@ -11,6 +11,8 @@ import TestSetup from "../components/testSetup";
 import MCQsTest from "../components/McqsTest";
 import Zindex from "../components/z-index";
 import Sprites from "../components/Sprites";
+import NewFormElement from "../components/newFormEle";
+import ImageMap from "../components/imageMap";
 const Components = {
   NavBar,
   SideBar,
@@ -23,7 +25,9 @@ const Components = {
   Media,
   TestSetup,
   MCQsTest,
+  NewFormElement,
   Zindex,
-Sprites
+ImageMap,
+Sprites,
 };
 export default Components;

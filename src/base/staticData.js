@@ -16,6 +16,13 @@ const Questions = [
   {
     head: "What are the benefits of CSS Sprites?",
     component: Component.Sprites,
+  }, {
+    head: "List out newly introduced form elements.",
+    component: Component.NewFormElement,
+  },
+  {
+    head: "Define an Image Map?",
+    component: Component.ImageMap,
   },
 ];
 export default Questions;
