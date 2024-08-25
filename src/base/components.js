@@ -13,6 +13,7 @@ import Zindex from "../components/z-index";
 import Sprites from "../components/Sprites";
 import NewFormElement from "../components/newFormEle";
 import ImageMap from "../components/imageMap";
+import CSSUnits from "../components/cssUnits";
 const Components = {
   NavBar,
   SideBar,
@@ -27,7 +28,8 @@ const Components = {
   MCQsTest,
   NewFormElement,
   Zindex,
-ImageMap,
-Sprites,
+  ImageMap,
+  Sprites,
+  CSSUnits,
 };
 export default Components;

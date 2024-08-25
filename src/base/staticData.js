@@ -24,5 +24,9 @@ const Questions = [
     head: "Define an Image Map?",
     component: Component.ImageMap,
   },
+  {
+    head: "How do you specify units in the CSS?",
+    component: Component.CSSUnits,
+  },
 ];
 export default Questions;
