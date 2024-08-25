@@ -120,24 +120,15 @@ const CSSUnits = () => {
                 <div
                   className="d-flex jcc aic flex-column"
                   style={{
-                    fontSize:`${fontSize}px`,
-                    width: 120,
-                    height: 120,
+                    fontSize: `${fontSize}px`,
+                    width: `50${fontSizeU}`,
+                    height: 50,
                     backgroundColor: "#364354",
                     color: "white",
                     borderRadius: "10%",
                   }}
                 >
                   PLAYGROUND
-                  <div
-                    style={{
-                      width: `50${fontSizeU}`,
-                      height: 50,
-                      borderRadius: "50%",
-                      backgroundColor: "#f68840",
-                      marginTop: 5,
-                    }}
-                  />
                 </div>
               </div>
             </td>
@@ -147,7 +138,7 @@ const CSSUnits = () => {
           </tr>
           <tr>
             <td colSpan={6} align="center">
-              Parent fontSize {fontSize}px
+              fontSize {fontSize}{fontSizeU}
               <input
                 style={{ width: 150, padding: 0, margin: 0 }}
                 type="range"
@@ -166,7 +157,7 @@ const CSSUnits = () => {
         <dt>% (percentage)</dt>
         <dd>relative to the parent element.</dd>
         <dt>em</dt>
-        <dd>relative to the fontSize of parent element</dd>
+        <dd>relative to the fontSize of the element</dd>
         <dt>rem</dt>
         <dd>relative to the fontSize of the root html</dd>
       </dl>
