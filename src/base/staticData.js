@@ -16,7 +16,8 @@ const Questions = [
   {
     head: "What are the benefits of CSS Sprites?",
     component: Component.Sprites,
-  }, {
+  },
+  {
     head: "List out newly introduced form elements.",
     component: Component.NewFormElement,
   },
@@ -27,6 +28,10 @@ const Questions = [
   {
     head: "How do you specify units in the CSS?",
     component: Component.CSSUnits,
+  },
+  {
+    head: "What are the various formatting tags in HTML?",
+    component: Component.FormattingTag,
   },
 ];
 export default Questions;

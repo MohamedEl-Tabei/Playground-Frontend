@@ -14,6 +14,7 @@ import Sprites from "../components/Sprites";
 import NewFormElement from "../components/newFormEle";
 import ImageMap from "../components/imageMap";
 import CSSUnits from "../components/cssUnits";
+import FormattingTag from "../components/formattingTag";
 const Components = {
   NavBar,
   SideBar,
@@ -31,5 +32,6 @@ const Components = {
   ImageMap,
   Sprites,
   CSSUnits,
+  FormattingTag,
 };
 export default Components;
