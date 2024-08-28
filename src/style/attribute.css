@@ -1,0 +1,10 @@
+*[name="capitalize"]{
+    margin-left: 0px;
+    padding: 10px;
+    width:  250px;
+    font-size: 1rem;
+    border: 1px solid var(--main);
+}
+button[name="capitalize"]{
+    margin-left: auto;
+}

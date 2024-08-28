@@ -33,5 +33,9 @@ const Questions = [
     head: "What are the various formatting tags in HTML?",
     component: Component.FormattingTag,
   },
+  {
+    head: "How do you make each word in a text start with a capital letter?",
+    component: Component.Capitalize_,
+  },
 ];
 export default Questions;

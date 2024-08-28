@@ -15,6 +15,7 @@ import NewFormElement from "../components/newFormEle";
 import ImageMap from "../components/imageMap";
 import CSSUnits from "../components/cssUnits";
 import FormattingTag from "../components/formattingTag";
+import Capitalize_ from "../components/capitalize";
 const Components = {
   NavBar,
   SideBar,
@@ -33,5 +34,6 @@ const Components = {
   Sprites,
   CSSUnits,
   FormattingTag,
+  Capitalize_,
 };
 export default Components;

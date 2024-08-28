@@ -5,7 +5,7 @@
   .mobile-w-100 {
     width: 100%;
   }
-  .mobile-w-50{
+  .mobile-w-50 {
     width: 50% !important;
   }
   .mobile-f-s {
@@ -49,23 +49,37 @@
   .mobile-w-mc {
     width: max-content !important;
   }
-  .mobile-y-scroll{
+  .mobile-y-scroll {
     overflow-y: scroll;
   }
-  .mobile-me-10{
+  .mobile-me-10 {
     margin-right: 10px;
-  }.mobile-ms-10{
+  }
+  .mobile-ms-10 {
     margin-left: 10px;
   }
-  .mobile-mw-50{
-    min-width: 50%
+  .mobile-mw-50 {
+    min-width: 50%;
   }
-  .mobile-fs-11{
+  .mobile-fs-11 {
     font-size: 11px;
   }
-  .mcqContainer,.mcqContainerWrong,.mcqContainerRight{
+  .mcqContainer,
+  .mcqContainerWrong,
+  .mcqContainerRight {
     border-radius: 0px;
     border-top: 0px;
   }
-  
+  *[name="capitalize"] {
+    margin-left: 0px;
+    padding: 10px;
+    width: 95%;
+    font-size: 1rem;
+    border: 1px solid var(--main);
+  }
+  button[name="capitalize"] {
+    margin:auto;
+    width: 250px;
+    margin-top: 15px;
+  }
 }

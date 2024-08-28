@@ -5,8 +5,8 @@ import "./style/colors.css";
 import "./style/tag.css";
 import "./style/id.css";
 import "./style/class.css";
-import "./style/mobile.css";
 import "./style/attribute.css";
+import "./style/mobile.css";
 import Pages from "./base/pages";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
