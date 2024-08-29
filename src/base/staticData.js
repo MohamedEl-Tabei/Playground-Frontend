@@ -37,5 +37,9 @@ const Questions = [
     head: "How do you make each word in a text start with a capital letter?",
     component: Component.Capitalize_,
   },
+  {
+    head: "What is the difference between inline, inline-block, and block?",
+    component: Component.CssDisplay,
+  },
 ];
 export default Questions;

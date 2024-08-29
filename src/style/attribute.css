@@ -1,10 +1,14 @@
-*[name="capitalize"]{
+*[name="capitalize"],[name="sm"]{
     margin-left: 0px;
     padding: 10px;
     width:  250px;
     font-size: 1rem;
     border: 1px solid var(--main);
 }
+*[name="sm"]{
+    width: 120px;
+}
+
 button[name="capitalize"]{
     margin-left: auto;
 }

@@ -16,6 +16,7 @@ import ImageMap from "../components/imageMap";
 import CSSUnits from "../components/cssUnits";
 import FormattingTag from "../components/formattingTag";
 import Capitalize_ from "../components/capitalize";
+import CssDisplay from "../components/cssDisplay";
 const Components = {
   NavBar,
   SideBar,
@@ -35,5 +36,6 @@ const Components = {
   CSSUnits,
   FormattingTag,
   Capitalize_,
+  CssDisplay,
 };
 export default Components;

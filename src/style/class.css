@@ -82,6 +82,9 @@
 .border-bottom {
   border-bottom: var(--main) solid 1px;
 }
+.border {
+  border: var(--main) solid 1px;
+}
 .border-top {
   border-top: var(--main) solid 1px;
 }
@@ -187,6 +190,9 @@
 }
 .m-0 {
   margin: 0px;
+}
+.m-auto{
+  margin: auto;
 }
 .mcqContainer {
   box-shadow: 5px 7px 20px #dddfe2;
@@ -359,6 +365,9 @@
 }
 .text-dark {
   color: var(--dark);
+}
+.text-light{
+  color: white;
 }
 /*u*/
 /*v*/
