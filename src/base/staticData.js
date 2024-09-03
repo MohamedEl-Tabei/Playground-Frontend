@@ -41,5 +41,9 @@ const Questions = [
     head: "What is the difference between inline, inline-block, and block?",
     component: Component.CssDisplay,
   },
+  {
+    head: "How is border-box different from content-box?",
+    component: Component.BoxSizing,
+  },
 ];
 export default Questions;

@@ -17,6 +17,7 @@ import CSSUnits from "../components/cssUnits";
 import FormattingTag from "../components/formattingTag";
 import Capitalize_ from "../components/capitalize";
 import CssDisplay from "../components/cssDisplay";
+import BoxSizing from "../components/boxSizing";
 const Components = {
   NavBar,
   SideBar,
@@ -37,5 +38,6 @@ const Components = {
   FormattingTag,
   Capitalize_,
   CssDisplay,
+  BoxSizing,
 };
 export default Components;
