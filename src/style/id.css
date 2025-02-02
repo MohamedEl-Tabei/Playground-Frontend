@@ -1,4 +1,7 @@
-#root{
-    height: 100vh;
+#root {
+  height: 100vh;
 }
 
+#videoContiner {
+  background-color: black;
+}

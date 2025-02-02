@@ -33,7 +33,7 @@ useEffect(()=>{
             label="Arabic"
           />
         </video> */}
-        <div className="w-100 w-lg-75" id="videoContiner"></div>
+        <div style={{ width:500 }}  id="videoContiner"></div>
         <dl style={{ width:300 }}>
           <dt>{"<video controls>"}</dt>
           <dd>{'<source src="" type="video/mp4" />'}</dd>
