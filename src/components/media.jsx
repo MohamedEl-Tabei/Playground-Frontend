@@ -1,11 +1,30 @@
+import { useEffect, useState } from "react";
+import MEVP from "../../node_modules/me-vp/index.js";
 function Media() {
+let [mounted ,setMounted]=useState(false)
+useEffect(()=>{
+  setMounted(true)
+},[])
+useEffect(()=>{
+   if(mounted)
+   { 
+    new MEVP(
+      "videoContiner",
+      "/video/1.mp4",
+      "100%",
+      2,
+      { color: "orange", backgroundColor: "black", accent: "orange" }
+    );
+  }
+  
+},[mounted])
   return (
     <div className="mobile-fs-11">
       <p style={{ paddingBottom:20 }}>
         video, audio, embed, source and track.
       </p>
-      <div className="d-flex flex-wrap aic jcb">
-        <video width={300} controls>
+      <div className="d-flex flex-wrap aic jcb " >
+        {/* <video width={300} controls>
           <source src="/video/1.mp4" type="video/mp4" />
           <track
             src="/meta/1.vtt"
@@ -13,7 +32,8 @@ function Media() {
             srcLang="ar"
             label="Arabic"
           />
-        </video>
+        </video> */}
+        <div className="w-100 w-lg-75" id="videoContiner"></div>
         <dl style={{ width:300 }}>
           <dt>{"<video controls>"}</dt>
           <dd>{'<source src="" type="video/mp4" />'}</dd>
